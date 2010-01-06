@@ -5,9 +5,8 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^fullrss/', include('fullrss.foo.urls')),
-
+    (r'^rss/hello', 'rss.views.hello'),
+    (r'^rss/import/(.*)', 'rss.views.importFeed'),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
